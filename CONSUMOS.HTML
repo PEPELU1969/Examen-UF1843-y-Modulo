@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="eS">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Consumo Eléctrico</title>
+</head>
+<body>
+
+  <h2>Resultado del Análisis de Consumo</h2>
+  <div id="resultado"></div>
+
+  <script>
+    function analizarConsumo(consumos) {
+      let diasConsumoAlto = 0;
+      let total = 0;
+      let minimo = consumos[0];
+
+      for (let consumo of consumos) {
+
+        if (consumo > 30) {
+          diasConsumoAlto++;
+        }
+
+        total += consumo;
+
+        if (consumo < minimo) {
+          minimo = consumo;
+        }
+      }
+
+      return [diasConsumoAlto, total, minimo];
+    }
+
+    const consumos = [28, 35, 22, 40, 31, 18, 25];
+    const resultado = analizarConsumo(consumos);
+
+    document.getElementById("resultado").innerHTML = `
+      <p><strong>Días con consumo alto:</strong> ${resultado[0]}</p>
+      <p><strong>Consumo total semanal:</strong> ${resultado[1]} kWh</p>
+      <p><strong>Consumo mínimo registrado:</strong> ${resultado[2]} kWh</p>
+    `;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}    
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #222;
+    color: white;
+    padding: 10px 0;
+}
+
+.contenedor-navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logotipo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.caja-busqueda input {
+    padding: 5px;
+}
+
+.caja-busqueda button {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.alternar-menu {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.principal {
+    background: #8cc63f;
+    color: #adff2f;
+    padding: 60px 0;
+}
+
+.principal h1 {
+    font-size: 63px;
+    margin-bottom: 10px;
+}
+
+.principal p {
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+.boton-claro {
+    background: white;
+    font-size: 14px;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.caracteristicas {
+    background: white;
+    padding: 50px 0;
+}
+
+.caracteristicas h2 {
+    margin-bottom: 10px;
+}
+
+.caracteristicas h3 {
+    color: #337ab7;
+}
+
+.caracteristicas span {
+    color: #777;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.descripcion-seccion {
+    margin-bottom: 30px;
+    color: #959595;
+}
+
+.rejilla {
+    display: flex;
+    gap: 20px;
+}
+
+.tarjeta {
+    flex: 1;
+}
+
+.tarjeta p {
+    padding: 20px 0px;
+    color: #959595;
+}
+
+.marcador {
+    background: #ccc;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.destacado {
+    background: #d6a21c;
+    padding: 40px 0;    
+}
+
+.destacado p {
+    padding: 20px 0;    
+}
+
+.boton-footer {
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.caracteristicas .rejilla,
+.destacado .rejilla {
+    align-items: flex-start;
+}
+
+.caracteristicas,
+.destacado {
+    padding: 60px 0;
+}
+
+footer {
+    background: white;
+    padding: 20px 0;
+    font-size: 14px;    
+}
+
+/* Responsive */
+
+@media(max-width: 768px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #222;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .alternar-menu {
+        display: block;
+    }
+
+    .rejilla {
+        flex-direction: column;
+    }
+
+    .caja-busqueda {
+        display: none;
+    }
+}
